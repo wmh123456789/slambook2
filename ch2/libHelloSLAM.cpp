@@ -2,6 +2,6 @@
 #include <iostream>
 using namespace std;
 
-void printHello() {
-  cout << "Hello SLAM" << endl;
+void printHello(int i) {
+  cout << i << ": Hello SLAM" << endl;
 }
