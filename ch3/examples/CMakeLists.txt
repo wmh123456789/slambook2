@@ -1,4 +1,11 @@
-include_directories("/usr/include/eigen3")
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# for MacosX, "/usr/local/include/eigen3"
+# for Ubuntu, "/usr/include/eigen3"
+include_directories("/usr/local/include/eigen3")
 add_executable(coordinateTransform coordinateTransform.cpp)
 
 find_package(Pangolin REQUIRED)

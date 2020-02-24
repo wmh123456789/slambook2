@@ -10,11 +10,11 @@ using namespace Eigen;
 // path to trajectory file
 string trajectory_file = "./examples/trajectory.txt";
 
-void DrawTrajectory(vector<Isometry3d, Eigen::aligned_allocator<Isometry3d>>);
+void DrawTrajectory(vector<Eigen::Isometry3d, Eigen::aligned_allocator<Isometry3d>>);
 
 int main(int argc, char **argv) {
 
-  vector<Isometry3d, Eigen::aligned_allocator<Isometry3d>> poses;
+  vector<Eigen::Isometry3d, Eigen::aligned_allocator<Isometry3d>> poses;
   ifstream fin(trajectory_file);
   if (!fin) {
     cout << "cannot find trajectory file at " << trajectory_file << endl;
@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
 }
 
 /*******************************************************************************************/
-void DrawTrajectory(vector<Isometry3d, Eigen::aligned_allocator<Isometry3d>> poses) {
+void DrawTrajectory(vector<Eigen::Isometry3d, Eigen::aligned_allocator<Isometry3d>> poses) {
   // create pangolin window and plot the trajectory
   pangolin::CreateWindowAndBind("Trajectory Viewer", 1024, 768);
   glEnable(GL_DEPTH_TEST);
